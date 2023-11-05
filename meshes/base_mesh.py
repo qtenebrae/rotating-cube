@@ -1,3 +1,4 @@
+import glm
 import numpy as np
 
 
@@ -14,6 +15,9 @@ class BaseMesh:
         # vertex array object
         self.vao = None
 
+        self.rotation_angle = 0.0  # Угол поворота объекта
+        self.rotation_speed = 0.001
+
     def get_vertex_data(self) -> np.array: ...
 
     def get_vao(self):
@@ -25,4 +29,10 @@ class BaseMesh:
         return vao
 
     def render(self):
+
+        model = glm.rotate(glm.mat4(1.0), self.rotation_angle, glm.vec3(0, 1, 0))
+        self.program['m_model'].write(model)
         self.vao.render()
+
+    def update(self):
+        self.rotation_angle += self.rotation_speed
