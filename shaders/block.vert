@@ -7,7 +7,7 @@ uniform mat4 m_view;
 uniform mat4 m_model;
 
 out vec2 uv;
-out int selected_texture;
+flat out int selected_texture;
 
 const vec2 uv_coords[4] = vec2[4](
 vec2(0, 0), vec2(0, 1),
