@@ -8,10 +8,17 @@ class Textures:
         self.ctx = app.ctx
 
         # load textures
-        self.texture_0 = self.load('texture.jpg')
-
-        # assign texture unit
-        self.texture_0.use(location=0)
+        self.textures = [
+            self.load('texture.jpg'),
+            self.load('texture1.jpg'),
+            self.load('texture2.jpg'),
+            self.load('texture3.jpg'),
+            self.load('texture4.jpg'),
+            self.load('texture5.jpg')
+        ]
+        # assign texture units
+        for i, texture in enumerate(self.textures):
+            texture.use(location=i)
 
     def load(self, file_name, is_tex_array=False):
         texture = pg.image.load(f'assets/{file_name}')
