@@ -2,3 +2,4 @@ numba
 moderngl
 pygame
 PyGLM
+pytest

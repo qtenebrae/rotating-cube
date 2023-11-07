@@ -1,6 +1,6 @@
-import numpy as np
+"""This file is not relevant in this version of the project, but can be used at a later date"""
 
-from settings import *
+from src.settings import *
 from meshes.base_mesh import BaseMesh
 
 

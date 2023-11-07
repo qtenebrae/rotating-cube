@@ -11,7 +11,7 @@ class Textures:
         self.textures = [
             self.load('texture.jpg'),
             self.load('texture1.jpg'),
-            self.load('texture2.jpg'),
+            self.load('cat.jpg'),
             self.load('texture3.jpg'),
             self.load('texture4.jpg'),
             self.load('texture5.jpg')

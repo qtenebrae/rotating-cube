@@ -1,6 +1,7 @@
+"""This file is not relevant in this version of the project, but can be used at a later date"""
+
 from meshes.base_mesh import BaseMesh
 from meshes.chunk_mesh_builder import build_chunk_mesh
-from settings import *
 
 
 class ChunkMesh(BaseMesh):

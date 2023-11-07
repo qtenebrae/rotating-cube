@@ -4,7 +4,7 @@ import glm
 import math
 
 # resolution
-WIN_RES = glm.vec2(1600, 900)
+WIN_RES = glm.vec2(1920, 1080)
 
 # chunk
 CHUNK_SIZE = 32
@@ -28,4 +28,4 @@ PLAYER_POS = glm.vec3(0, 0, 60)
 MOUSE_SENSITIVITY = 0.01
 
 # colors
-BG_COLOR = glm.vec3(0.96, 0.96, 0.86)
+BG_COLOR = glm.vec3(0.83, 0.92, 1)

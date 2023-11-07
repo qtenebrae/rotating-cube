@@ -29,7 +29,6 @@ class BaseMesh:
         return vao
 
     def render(self):
-
         model = glm.rotate(glm.mat4(1.0), self.rotation_angle, glm.vec3(0, 1, 0))
         self.program['m_model'].write(model)
         self.vao.render()

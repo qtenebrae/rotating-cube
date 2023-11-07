@@ -1,3 +1,5 @@
+// This file is not relevant in this version of the project, but can be used at a later date
+
 #version 330 core
 
 layout (location = 0) in vec3 in_position;
@@ -12,13 +14,13 @@ out vec3 voxel_color;
 out vec2 uv;
 
 const vec2 uv_coords[4] = vec2[4](
-    vec2(0, 0), vec2(0, 1),
-    vec2(1, 0), vec2(1, 1)
+vec2(0, 0), vec2(0, 1),
+vec2(1, 0), vec2(1, 1)
 );
 
 const int uv_indices[12] = int[12](
-    1, 0, 2, 1, 2, 3,
-    3, 0, 2, 3, 1, 0
+1, 0, 2, 1, 2, 3,
+3, 0, 2, 3, 1, 0
 );
 
 vec3 hash31(float p) {

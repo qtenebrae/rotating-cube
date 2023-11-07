@@ -1,5 +1,5 @@
 from meshes.chunk_mesh import ChunkMesh
-from settings import *
+from src.settings import *
 
 
 class Chunk:

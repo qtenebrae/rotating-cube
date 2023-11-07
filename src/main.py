@@ -1,11 +1,11 @@
-from settings import *
+from src.settings import *
 import moderngl as mgl
 import pygame as pg
 import sys
-from shader_program import ShaderProgram
-from scene import Scene
+from src.shader_program import ShaderProgram
+from src.scene import Scene
 from player import Player
-from textures import Textures
+from src.textures import Textures
 
 
 class VoxelEngine:

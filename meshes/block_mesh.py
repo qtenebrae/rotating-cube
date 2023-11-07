@@ -1,8 +1,8 @@
-from settings import *
+from src.settings import *
 from meshes.base_mesh import BaseMesh
 
 
-class Block(BaseMesh):
+class BlockMesh(BaseMesh):
     def __init__(self, app):
         super().__init__()
 

@@ -1,4 +1,6 @@
-from settings import *
+"""This file is not relevant in this version of the project, but can be used at a later date"""
+
+from src.settings import *
 
 
 def is_void(voxel_pos, chunk_voxels):
