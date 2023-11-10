@@ -20,8 +20,11 @@ const int uv_indices[12] = int[12](
 );
 
 void main() {
+    // Вычисление индекса UV-координаты для текущего вертекса
     int uv_index = gl_VertexID % 6;
+    // Получение UV-координаты из предопределенного массива
     uv = uv_coords[uv_indices[uv_index]];
+    // Определение выбранной текстуры на основе индекса вертекса
     if (gl_VertexID / 6 == 0) {
         selected_texture = 0;
     } else if (gl_VertexID / 6 == 1) {
@@ -35,5 +38,7 @@ void main() {
     } else if (gl_VertexID / 6 == 5) {
         selected_texture = 5;
     }
+
+    // Вычисление позиции вертекса в пространстве
     gl_Position = m_proj * m_view * m_model * vec4(in_position, 1.0);
 }

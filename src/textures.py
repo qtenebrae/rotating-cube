@@ -3,7 +3,15 @@ import moderngl as mgl
 
 
 class Textures:
+    """Класс Textures отвечает за управление текстурами в графической среде, используемой в приложении или игре."""
+
     def __init__(self, app):
+        """
+        Инициализирует объект Textures.
+
+        Parameters:
+            app (VoxelEngine): Экземпляр VoxelEngine, к которому принадлежат текстуры.
+        """
         self.app = app
         self.ctx = app.ctx
 
@@ -11,7 +19,7 @@ class Textures:
         self.textures = [
             self.load('texture.jpg'),
             self.load('texture1.jpg'),
-            self.load('cat.jpg'),
+            self.load('texture2.jpg'),
             self.load('texture3.jpg'),
             self.load('texture4.jpg'),
             self.load('texture5.jpg')
@@ -21,6 +29,16 @@ class Textures:
             texture.use(location=i)
 
     def load(self, file_name, is_tex_array=False):
+        """
+        Загружает текстуру из файла и выполняет необходимые операции для подготовки ее к использованию.
+
+        Parameters:
+            file_name (str): Имя файла текстуры.
+            is_tex_array (bool, optional): Флаг, указывающий, является ли текстура массивом текстур. По умолчанию False.
+
+        Returns:
+            moderngl.Texture: Объект текстуры.
+        """
         texture = pg.image.load(f'assets/{file_name}')
         texture = pg.transform.flip(texture, flip_x=True, flip_y=False)
 

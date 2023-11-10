@@ -3,7 +3,11 @@ from meshes.base_mesh import BaseMesh
 
 
 class BlockMesh(BaseMesh):
+    """Класс BlockMesh представляет сетку блока в трехмерной сцене
+    и отвечает за создание и отрисовку вершинных данных блока."""
+
     def __init__(self, app):
+        """Инициализирует экземпляр класса BlockMesh."""
         super().__init__()
 
         self.app = app
@@ -15,6 +19,7 @@ class BlockMesh(BaseMesh):
         self.vao = self.get_vao()
 
     def get_vertex_data(self):
+        """Возвращает данные вершин для блока."""
         vertices = [
             # Вершины для стороны 1 (передняя)
             (15, 15, 15), (-15, 15, 15), (-15, -15, 15),

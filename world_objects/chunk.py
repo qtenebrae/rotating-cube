@@ -1,3 +1,5 @@
+"""This file is not relevant in this version of the project, but can be used at a later date"""
+
 from meshes.chunk_mesh import ChunkMesh
 from src.settings import *
 
